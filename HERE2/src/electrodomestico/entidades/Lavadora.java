@@ -1,11 +1,13 @@
 package electrodomestico.entidades;
 
+public class Lavadora extends Electrodomestico {
 
-public class Lavadora extends Electrodomestico{
-    
     protected Double carga;
 
-    public Lavadora(Double carga, Double precio, String color, char consumo, Double peso) {
+    public Lavadora() {
+    }
+
+    public Lavadora(Double carga, Double precio, String color, String consumo, Double peso) {
         super(precio, color, consumo, peso);
         this.carga = carga;
     }
@@ -17,17 +19,21 @@ public class Lavadora extends Electrodomestico{
     public void setCarga(Double carga) {
         this.carga = carga;
     }
-    
-    public Lavadora crearLavadora(){
+
+    public Lavadora crearLavadora() {
         crearElectrodomestico();
         System.out.println("Ingrese la capacidad de carga");
-        Double carga = leer.nextDouble();
-        
+        carga = leer.nextDouble();
+
         return new Lavadora(carga, precio, color, consumo, peso);
-    }    
-    
-    public void precioFinal(){
-        
     }
 
+    @Override
+    public void precioFinal() {
+        super.precioFinal();
+        if (carga > 30) {
+            precio += 500;
+        }
+    }
+    
 }
