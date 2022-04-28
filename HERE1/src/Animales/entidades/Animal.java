@@ -1,8 +1,8 @@
-package animales.entidades;
+package Animales.entidades;
 
 
 public class Animal {
-
+    
     protected String nombre;
     protected String alimento;
     protected Integer edad;
@@ -14,42 +14,9 @@ public class Animal {
         this.edad = edad;
         this.raza = raza;
     }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getAlimento() {
-        return alimento;
-    }
-
-    public void setAlimento(String alimento) {
-        this.alimento = alimento;
-    }
-
-    public Integer getEdad() {
-        return edad;
-    }
-
-    public void setEdad(Integer edad) {
-        this.edad = edad;
-    }
-
-    public String getRaza() {
-        return raza;
-    }
-
-    public void setRaza(String raza) {
-        this.raza = raza;
-    }
     
     public void Alimentarse(){
         System.out.println("me alimento de: "+alimento);
     }
-    
-    
+
 }
