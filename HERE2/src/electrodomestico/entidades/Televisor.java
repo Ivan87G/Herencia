@@ -30,6 +30,13 @@ public class Televisor extends Electrodomestico {
         this.sintonizadorTDT = sintonizadorTDT;
     }
 
+    @Override
+    public String toString() {
+        return "Televisor{"+super.toString() + "resolucion=" + resolucion + ", sintonizadorTDT=" + sintonizadorTDT + '}';
+    }
+    
+    
+
     public Televisor crearTelevisor() {
         crearElectrodomestico();
         System.out.println("Ingrese Medida del Televisor en Pulgadas");
