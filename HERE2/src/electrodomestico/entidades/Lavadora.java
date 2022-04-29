@@ -20,6 +20,11 @@ public class Lavadora extends Electrodomestico {
         this.carga = carga;
     }
 
+    @Override
+    public String toString() {
+        return "Lavadora{"+super.toString() + "carga=" + carga + '}';
+    }
+  
     public Lavadora crearLavadora() {
         crearElectrodomestico();
         System.out.println("Ingrese la capacidad de carga");

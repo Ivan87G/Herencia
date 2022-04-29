@@ -53,6 +53,13 @@ public class Electrodomestico {
         this.peso = peso;
     }
 
+    @Override
+    public String toString() {
+        return "precio=" + precio + ", color=" + color + ", consumo=" + consumo + ", peso=" + peso ;
+    }
+    
+    
+
     public void comprobarConsumoEnergetico(String letra) {
         if (((((letra.equalsIgnoreCase("a") || letra.equalsIgnoreCase("b")) || letra.equalsIgnoreCase("c")) || letra.equalsIgnoreCase("d")) || letra.equalsIgnoreCase("e")) || letra.equalsIgnoreCase("f")) {
             consumo = letra;
@@ -70,8 +77,8 @@ public class Electrodomestico {
     }
 
     public Electrodomestico crearElectrodomestico() {
-        System.out.println("Ingrese Precio");
-        precio = leer.nextDouble() + 1000;
+        
+        precio = 1000d;
 
         System.out.println("Ingrese Color");
         color = leer.next();
